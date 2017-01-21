@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GitHub Dungeon Crawl Classics Zero Level Character Funnel Generator</title>
+    
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Mark Tasaka 2016">
+
+
+	<link rel="stylesheet" href="css/dcc_github.css"  />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8" />
+
+
+	</head>
+	
+	
+<body>
+
+
+	<section>
+		
+		<h1>Dungeon Crawl Classics Random Zero Level Character Launch Page</h1>
+		
+		<p>Welcome to the Launch Page of the Dungeon Crawl Classics Zero Level Character Generator.  Please make a selection below to generate a range of zero-level characters.  The zero level characters are designed using JavaScript and produce playable zero level characters consistent with Goodman Games’ Dungeon Crawl Classics Pen and Paper Roleplaying System.</p>
+		
+		<p>For more information on the Dungeon Crawl Classics Game System, please visit:</p>
+		
+		<p><a href="http://goodman-games.com/" target="_blank" class="links">http://goodman-games.com/</a></p>
+		
+		<p>To see the generator used in the contents of the web, please visit:</p>
+		
+		<p><a href="http://www.oldschooladventures.org/dcc/" target="_blank" class="links">http://www.oldschooladventures.org/dcc/</a></p>
+		
+		
+		<h2>Zero-Level Character Generator</h2>
+			
+		<form action="" id ="myForm"  target="_blank">
+			
+			
+		<div class="content">
+		
+			  <select id="abilityScores" class="dropdownmenu">
+				<option value="1" selected>3d6</option>
+				<option value="2">4d6&#42;</option>
+				<option value="3">2d6&#43;6</option>
+			  </select>
+			
+			  <select id="hitPoints" class="dropdownmenu2">
+				<option value="1"  selected id="d4">d4 hp</option>
+				<option value="2" id="max">max hp</option>
+			  </select>
+
+			  <select id="occupations" class="dropdownmenu3">
+				<option value="1"  selected>All Occupations</option>
+				<option value="2">Humans Only</option>
+				<option value="3">Demi-humans Only</option>
+				<option value="4">Dwarves Only</option>
+				<option value="5">Elves Only</option>
+				<option value="6">Halflings Only</option>
+				<option value="7">Gong Farmers</option>
+				<option value="8">Mercenary</option>
+				<option value="9">Outlaw</option>
+				<option value="10">Soldier</option>
+			  </select>
+			
+			<div class="generatorb">
+
+				<input type="submit" value="Generator Characters" id="generate_level0_characters"/>
+			
+				
+				<input type="reset"  value="Reset to Default" id="reset__level0_characters"/>
+		
+				</div>
+			</div>
+				</form>
+
+
+    </section>
+
+
+	<script>
+		document.getElementById("generate_level0_characters").onclick =  function(){
+			var ability = "1";
+			if(document.getElementById("abilityScores").value == 2) {
+				ability = "2";
+			}
+			else if(document.getElementById("abilityScores").value == 3) {
+				ability = "3";
+			}
+			
+			
+			var hp = "1";
+			if(document.getElementById("hitPoints").value == 2) {
+				hp = "2";
+			}
+				
+			
+			var occupation = "1";
+			if(document.getElementById("occupations").value == 2) {
+				occupation = "2";
+			}
+			else if(document.getElementById("occupations").value == 3) {
+				occupation = "3";
+			}
+			else if(document.getElementById("occupations").value == 4) {
+				occupation = "4";
+			}
+			else if(document.getElementById("occupations").value == 5) {
+				occupation = "5";
+			}
+			else if(document.getElementById("occupations").value == 6) {
+				occupation = "6";
+			}
+			else if(document.getElementById("occupations").value == 7) {
+				occupation = "7";
+			}
+			else if(document.getElementById("occupations").value == 8) {
+				occupation = "8";
+			}
+			else if(document.getElementById("occupations").value == 9) {
+				occupation = "9";
+			}
+			else if(document.getElementById("occupations").value == 10) {
+				occupation = "10";
+			}
+			
+			
+			document.getElementById("myForm").action = "zero_level_characters/dcc_level0_" + ability + hp + occupation + ".html";
+			
+		}
+		
+
+	</script>
+        
+
+
+</body>
+    
+</html>
